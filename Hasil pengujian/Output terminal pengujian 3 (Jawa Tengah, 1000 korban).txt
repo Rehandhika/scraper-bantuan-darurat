@@ -1,0 +1,394 @@
+PS D:\RedCompass> cd pengujian
+PS D:\RedCompass\pengujian> python script.py
+🚀 SISTEM ESTIMASI BIAYA BANTUAN DARURAT BENCANA
+================================================================================
+
+📝 INPUT DATA:
+Jumlah korban jiwa: 1000
+Lokasi bencana: Jawa Tengah
+
+================================================================================
+📍 DAFTAR PROVINSI INDONESIA
+================================================================================
+   1. DKI Jakarta
+   2. Jawa Barat
+   3. Jawa Tengah
+   4. Jawa Timur
+   5. Banten
+   6. DI Yogyakarta
+   7. Bali
+   8. Sumatera Utara
+   9. Sumatera Selatan
+  10. Sumatera Barat
+  11. Lampung
+  12. Riau
+  13. Jambi
+  14. Bengkulu
+  15. Aceh
+  16. Kalimantan Barat
+  17. Kalimantan Tengah
+  18. Kalimantan Selatan
+  19. Kalimantan Timur
+  20. Kalimantan Utara
+  21. Sulawesi Utara
+  22. Sulawesi Tengah
+  23. Sulawesi Selatan
+  24. Sulawesi Tenggara
+  25. Gorontalo
+  26. Sulawesi Barat
+  27. Nusa Tenggara Barat
+  28. Nusa Tenggara Timur
+  29. Maluku
+  30. Maluku Utara
+  31. Papua
+  32. Papua Barat
+  33. Papua Selatan
+  34. Papua Tengah
+
+   0. Nasional (Tanpa Filter Lokasi)
+================================================================================
+
+Pilih nomor provinsi (0-34): 3
+✅ Filter lokasi: Jawa Tengah
+
+================================================================================
+📊 ESTIMASI BIAYA BANTUAN DARURAT BENCANA
+================================================================================
+📍 Lokasi Bencana: Jawa Tengah
+🗺️ Filter Harga: Jawa Tengah
+👥 Jumlah Korban: 1,000 jiwa
+⏰ Periode: 3 hari masa darurat
+📋 Standar: BNPB No. 7 Tahun 2008
+🛒 Sumber Data: Blibli + Lazada
+📅 Tanggal: 17 October 2025, 13:31 WIB
+================================================================================
+
+📊 MENGHITUNG KEBUTUHAN BNPB...
+✅ Kebutuhan:
+  • Air Mineral: 7500.0 liter (521 kemasan)
+  • Beras: 1200.0 kg (240 kemasan)
+  • Mi Instan: 9000.0 bungkus (225 kemasan)
+  • Minyak Goreng: 250.0 liter (125 kemasan)
+  • Gula Pasir: 250.0 kg (250 kemasan)
+  • Selimut: 400.0 buah (400 kemasan)
+
+================================================================================
+🛒 MULAI SCRAPING DARI 2 MARKETPLACE
+================================================================================
+
+================================================================================
+📦 Air Mineral (521 kemasan)
+================================================================================
+
+================================================================================
+🔍 SCRAPING: air mineral 600ml dus
+================================================================================
+
+🔵 BLIBLI - air mineral 600ml dus
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 9 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 0 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 0 produk berhasil
+   ✅ Total: 9 produk
+
+🟠 LAZADA - air mineral 600ml dus
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 30 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 39 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 40 produk berhasil
+   ✅ Total: 109 produk
+
+📊 RINGKASAN:
+   🔵 Blibli: 9 produk
+   🟠 Lazada: 109 produk
+   📦 Total: 118 produk
+
+🧹 FILTER OUTLIER (IQR):
+   📊 Total RAW: 118 produk
+   📈 Q1: Rp 29,500 | Median: Rp 48,500 | Q3: Rp 83,700
+   🗑️ Outlier dihapus: 8 (6.8%)
+   ✅ Data bersih: 110 produk
+
+💰 STATISTIK HARGA:
+   📊 Median: Rp 46,940
+   📊 Mean: Rp 54,319
+   📈 Range: Rp 6,200 - Rp 164,999
+
+================================================================================
+📦 Beras (240 kemasan)
+================================================================================
+
+================================================================================
+🔍 SCRAPING: beras 5kg
+================================================================================
+
+🔵 BLIBLI - beras 5kg
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 99 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 85 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 84 produk berhasil
+   ✅ Total: 268 produk
+
+🟠 LAZADA - beras 5kg
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 40 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 40 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 40 produk berhasil
+   ✅ Total: 120 produk
+
+📊 RINGKASAN:
+   🔵 Blibli: 268 produk
+   🟠 Lazada: 120 produk
+   📦 Total: 388 produk
+
+🧹 FILTER OUTLIER (IQR):
+   📊 Total RAW: 388 produk
+   📈 Q1: Rp 78,000 | Median: Rp 89,750 | Q3: Rp 109,900
+   🗑️ Outlier dihapus: 70 (18.0%)
+   ✅ Data bersih: 318 produk
+
+💰 STATISTIK HARGA:
+   📊 Median: Rp 89,000
+   📊 Mean: Rp 91,008
+   📈 Range: Rp 34,000 - Rp 150,000
+
+================================================================================
+📦 Mi Instan (225 kemasan)
+================================================================================
+
+================================================================================
+🔍 SCRAPING: indomie 1 dus
+================================================================================
+
+🔵 BLIBLI - indomie 1 dus
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 44 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 11 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 0 produk berhasil
+   ✅ Total: 55 produk
+
+🟠 LAZADA - indomie 1 dus
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 40 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 34 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 40 produk berhasil
+   ✅ Total: 114 produk
+
+📊 RINGKASAN:
+   🔵 Blibli: 55 produk
+   🟠 Lazada: 114 produk
+   📦 Total: 169 produk
+
+🧹 FILTER OUTLIER (IQR):
+   📊 Total RAW: 169 produk
+   📈 Q1: Rp 55,600 | Median: Rp 117,050 | Q3: Rp 137,000
+   🗑️ Outlier dihapus: 0 (0.0%)
+   ✅ Data bersih: 169 produk
+
+💰 STATISTIK HARGA:
+   📊 Median: Rp 117,050
+   📊 Mean: Rp 98,666
+   📈 Range: Rp 5,250 - Rp 176,500
+
+================================================================================
+📦 Minyak Goreng (125 kemasan)
+================================================================================
+
+================================================================================
+🔍 SCRAPING: minyak goreng 2 liter
+================================================================================
+
+🔵 BLIBLI - minyak goreng 2 liter
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 99 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 88 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 86 produk berhasil
+   ✅ Total: 273 produk
+
+🟠 LAZADA - minyak goreng 2 liter
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 40 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 40 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 40 produk berhasil
+   ✅ Total: 120 produk
+
+📊 RINGKASAN:
+   🔵 Blibli: 273 produk
+   🟠 Lazada: 120 produk
+   📦 Total: 393 produk
+
+🧹 FILTER OUTLIER (IQR):
+   📊 Total RAW: 393 produk
+   📈 Q1: Rp 43,500 | Median: Rp 47,900 | Q3: Rp 53,665
+   🗑️ Outlier dihapus: 89 (22.6%)
+   ✅ Data bersih: 304 produk
+
+💰 STATISTIK HARGA:
+   📊 Median: Rp 47,550
+   📊 Mean: Rp 47,895
+   📈 Range: Rp 28,729 - Rp 67,483
+
+================================================================================
+📦 Gula Pasir (250 kemasan)
+================================================================================
+
+================================================================================
+🔍 SCRAPING: gula pasir 1kg
+================================================================================
+
+🔵 BLIBLI - gula pasir 1kg
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 99 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 86 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 40 produk berhasil
+   ✅ Total: 225 produk
+
+🟠 LAZADA - gula pasir 1kg
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 40 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 40 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 40 produk berhasil
+   ✅ Total: 120 produk
+
+📊 RINGKASAN:
+   🔵 Blibli: 225 produk
+   🟠 Lazada: 120 produk
+   📦 Total: 345 produk
+
+🧹 FILTER OUTLIER (IQR):
+   📊 Total RAW: 345 produk
+   📈 Q1: Rp 21,000 | Median: Rp 22,139 | Q3: Rp 25,000
+   🗑️ Outlier dihapus: 54 (15.7%)
+   ✅ Data bersih: 291 produk
+
+💰 STATISTIK HARGA:
+   📊 Median: Rp 22,000
+   📊 Mean: Rp 21,990
+   📈 Range: Rp 15,000 - Rp 30,000
+
+================================================================================
+📦 Selimut (400 kemasan)
+================================================================================
+
+================================================================================
+🔍 SCRAPING: selimut tebal
+================================================================================
+
+🔵 BLIBLI - selimut tebal
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 31 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 0 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 0 produk berhasil
+   ✅ Total: 31 produk
+
+🟠 LAZADA - selimut tebal
+   📍 Lokasi: Jawa Tengah
+   📄 Target: 3 halaman
+   📄 Halaman 1/3 - Loading...
+      ✓ 40 produk berhasil
+   📄 Halaman 2/3 - Loading...
+      ✓ 0 produk berhasil
+   📄 Halaman 3/3 - Loading...
+      ✓ 0 produk berhasil
+   ✅ Total: 40 produk
+
+📊 RINGKASAN:
+   🔵 Blibli: 31 produk
+   🟠 Lazada: 40 produk
+   📦 Total: 71 produk
+
+🧹 FILTER OUTLIER (IQR):
+   📊 Total RAW: 71 produk
+   📈 Q1: Rp 33,600 | Median: Rp 57,000 | Q3: Rp 95,000
+   🗑️ Outlier dihapus: 3 (4.2%)
+   ✅ Data bersih: 68 produk
+
+💰 STATISTIK HARGA:
+   📊 Median: Rp 54,500
+   📊 Mean: Rp 65,043
+   📈 Range: Rp 6,000 - Rp 168,000
+
+================================================================================
+💰 HASIL KALKULASI BIAYA
+================================================================================
+
+📋 RINCIAN KEBUTUHAN DAN BIAYA:
+------------------------------------------------------------------------------------------------------------------------
+No  Barang               Kebutuhan       Kemasan    Harga/Unit         Subtotal           Data
+------------------------------------------------------------------------------------------------------------------------
+1   Air Mineral          7500.0 liter        521        Rp      46,940.0 Rp  24,455,740.0 110
+2   Beras                1200.0 kg           240        Rp      89,000.0 Rp  21,360,000.0 318
+3   Mi Instan            9000.0 bungkus      225        Rp       117,050 Rp    26,336,250 169
+4   Minyak Goreng        250.0 liter        125        Rp      47,550.0 Rp   5,943,750.0 304
+5   Gula Pasir           250.0 kg           250        Rp        22,000 Rp     5,500,000 291
+6   Selimut              400.0 buah         400        Rp      54,500.0 Rp  21,800,000.0 68
+------------------------------------------------------------------------------------------------------------------------
+TOTAL ESTIMASI BIAYA                                                        Rp 105,395,740.0
+========================================================================================================================
+
+📈 ANALISIS:
+  💰 Biaya per jiwa (3 hari): Rp 105,396
+  📊 Biaya per jiwa per hari: Rp 35,132
+  🥇 Prioritas tinggi (air, beras, mi): Rp 72,151,990 (68.5%)
+
+📊 STATISTIK SCRAPING:
+  🔵 Blibli: 681 produk
+  🟠 Lazada: 579 produk
+  📦 Total: 1260 produk (setelah filter outlier)
+
+💾 Detail produk tersimpan: detail_produk_Jawa_Tengah_Jawa_Tengah_20251017_1359.csv
+💾 Ringkasan biaya tersimpan: ringkasan_biaya_Jawa_Tengah_Jawa_Tengah_20251017_1359.csv
+
+================================================================================
+✅ ANALISIS SELESAI!
+📊 Total Biaya: Rp 105,395,740
+👥 Untuk 1,000 jiwa di Jawa Tengah
+🗺️ Filter: Jawa Tengah
+📦 Total Produk Dianalisis: 1260
+================================================================================
+
+PS D:\RedCompass\pengujian> 
